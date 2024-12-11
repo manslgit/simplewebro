@@ -1,0 +1,288 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
+}
+
+nav {
+    background-color: rgba(54, 156, 51, 0.479);
+    color: white;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.navbar-left {
+    font-size: large;
+    font-weight: bolder;
+    min-width: 3ch;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+/* Efek hover slider pada .navbar-right */
+.navbar-right a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-right a::after {
+    position: absolute;
+    content: '';
+    bottom: -2px; /* Jarak garis hover dari teks */
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+    width: 0;
+    background-color: white; /* Warna garis */
+    transition: width 200ms ease-in-out;
+}
+
+.navbar-right a:hover::after {
+    width: 100%; /* Slider bergerak ke kanan */
+}
+
+/* Efek hover pada .navbar-left */
+.navbar-left:hover {
+    border-bottom: 2px solid white; /* Warna border terlihat */
+    transition: border 0.2s ease-in-out;
+}
+
+
+/* .main-container * {
+background-color: whitesmoke;
+} */
+
+.child-first-content {
+    border-top: 2px solid white;
+    border-bottom: 2px solid black;
+    background: linear-gradient(to bottom, rgba(133, 134, 156, 0.26), rgb(210, 248, 210));
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.child-first-content>h2 {
+    background-color: rgba(6, 90, 20, 0.233);
+    min-width: 300px;
+    border-radius: 8px;
+    padding: 1rem 1rem;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 0px 1px 2px rgba(21, 139, 17, 0.562);
+}
+
+/* .child-first-content>h2:hover {
+
+} */
+
+.box-of-plants {
+    border-radius: 20px;
+    width: 210px;
+    height: 210px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-grow: 1;
+    min-width: 300px;
+    /* min-height: 200px; */
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.box-of-plants:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.box-of-plants>img {
+    background-color: transparent;
+    width: 125px;
+    height: 125px;
+    margin-bottom: -10px;
+}
+
+.box-of-plants>P {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.box-of-plants form>button {
+    margin: 15px 0px 30px;
+    padding: 8px;
+    border: transparent;
+    box-shadow: 1px 2px 2px 0px rgb(176, 197, 80);
+    transition: all 200ms ease-in-out ;
+    border-radius: 8px;
+}
+
+.box-of-plants form>button:hover {
+    background-color: rgb(223, 247, 188);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* .box-of-plants form>button:active {
+    margin-top: 10px;
+    padding: 8px;
+    border: transparent;
+    background-color: black;
+    color: white;
+} */
+
+@media screen and (max-width: 468px) {
+    /* .child-first-content {
+        flex-direction: column;
+        gap: 20px;
+    } */
+
+    .box-of-plants {
+        width: 185px;
+        height: 185px;
+        gap: 0px;
+    }
+
+    .box-of-plants:nth-child(1) {
+        margin-top: 40px;
+    }
+
+    .box-of-plants>img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .box-of-plants>p {
+        font-size: 10px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .navbar-left {
+        font-size: small;
+    }
+
+    .navbar-right {
+        gap: 1rem;
+    }
+}
+
+.child-second-content {
+    display: flex;
+    height: auto;
+    background: linear-gradient(to top, rgba(133, 134, 156, 0.26), rgb(210, 248, 210));
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* overflow: hidden; */
+}
+
+/* .child-first-content {
+    border-top: 2px solid white;
+    border-bottom: 2px solid black;
+    background: linear-gradient(to bottom, rgba(133, 134, 156, 0.26), rgb(210, 248, 210));
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+} */
+
+.child-second-content>h2 {
+    background-color: rgba(6, 90, 20, 0.233);
+    border-radius: 8px;
+    padding: 1rem 1rem;
+    flex-basis: 100%;
+    text-align: center;
+    /* margin-top: 0.5rem;
+    margin-bottom: 0.5rem; */
+    color: white;
+    text-shadow: 0px 1px 2px rgba(21, 139, 17, 0.562);
+}
+
+.box-second-content:nth-child(1) {
+    min-width: 200px;
+    height: 200px;
+    background-color: rgba(245, 245, 245, 0.644);
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    padding: 15px;
+}
+
+.box-second-content:nth-child(1) > figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    object-position: center;
+    background: transparent;
+    object-fit: cover;
+    gap: 5px;
+}
+
+.box-second-content:nth-child(1) figure > img {
+    width: 150px;
+    height: 150px;
+}
+
+.box-second-content:nth-child(2) {
+    width: 500px;
+    height: 200px;
+    background-color: rgba(141, 141, 141, 0.144);
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 15px;
+    flex-direction: column;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    flex-grow: 1;
+}
+
+.box-second-content:nth-child(2) > h3 {
+    text-align: center;
+    margin-bottom:20px;
+    color: white;
+}
